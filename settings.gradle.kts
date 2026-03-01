@@ -41,3 +41,5 @@ include(":app:webApp")
 include(":components:buttons")
 
 include(":docs:sample")
+
+include(":validation-tests")
