@@ -35,7 +35,8 @@ platforms without complex setup.
 
 Dive into our comprehensive guides and interactive component library to accelerate your development.
 
-[👉 View Full Documentation](https://chen-xi-g.github.io/MultiplatformUI/)
+- [👉 View Full Documentation](https://chen-xi-g.github.io/MultiplatformUI/) - Guides and interactive component library
+- [🔍 Explore API Reference](https://chen-xi-g.github.io/MultiplatformUI/dokka/) - Auto-generated API docs (Dokka)
 
 ## 📂 Project Structure
 
