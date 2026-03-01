@@ -1,0 +1,47 @@
+name: Maven Publish
+
+on:
+  push:
+    tags: ["v*"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    name: Build and push to the maven repository
+    runs-on: macOS-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout Sources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'zulu'
+          java-version: '21'
+          cache: 'gradle'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v5
+
+      - name: Publish to MavenCentral
+        run: ./gradlew publishToMavenCentral --no-daemon --no-configuration-cache
+        env:
+          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.GPG_KEY_CONTENTS }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyId: ${{ secrets.SIGNING_KEY_ID }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_PASSWORD }}
+
+      - name: Publish to GitHub Packages
+        run: ./gradlew publishAllPublicationsToGithubRepository --no-daemon --no-configuration-cache
+        env:
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
