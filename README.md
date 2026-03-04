@@ -17,7 +17,7 @@ Our core goal is to provide commonly used **advanced components**. With Multipla
 can easily and quickly use them on **Android**, **iOS**, **Desktop (JVM)**, and **Web (Wasm/JS)**
 platforms without complex setup.
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.Chen-Xi-g/MultiplatformUI)](https://search.maven.org/search?q=g:ltd.cloudgrid.components)
+[![Maven Central](https://img.shields.io/maven-central/v/ltd.cloudgrid.components/buttons)](https://search.maven.org/search?q=g:ltd.cloudgrid.components)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.3.10-7F52FF)](https://kotlinlang.org/)
 [![Compose Multiplatform](https://img.shields.io/badge/compose-1.10.0-4285F4)](https://www.jetbrains.com/compose-multiplatform)
 [![License](https://img.shields.io/github/license/Chen-Xi-g/MultiplatformUI)](LICENSE)
