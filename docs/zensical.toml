@@ -34,7 +34,7 @@ site_author = "高国峰"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 The authors
+Copyright &copy; 2026 The 高国峰
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
