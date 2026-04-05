@@ -2,7 +2,9 @@ name: Documentation
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+      - "*-snapshot"
     paths:
       - "docs/**"
 
@@ -64,13 +66,21 @@ jobs:
         with:
           name: docs-build-files
           path: ./docs
-      - uses: actions/setup-python@v5
-        with:
-          python-version: 3.x
-      - run: |
+      - name: Build & Deploy to correct path
+        run: |
           cd docs
           pip install zensical
-          zensical build --clean
+          
+          # 判断是否为 snapshot 分支
+          if [[ "${GITHUB_REF_NAME}" == *-snapshot ]]; then
+            echo "Running Snapshot build -> /snapshot"
+            zensical build --clean --base-path /snapshot
+            mkdir -p ./site/snapshot
+            mv ./site/* ./site/snapshot/ 2>/dev/null || true
+          else
+            echo "Running Production build"
+            zensical build --clean
+          fi
       - uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs/site
