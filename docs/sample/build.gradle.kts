@@ -36,7 +36,7 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             // Buttons
-            implementation(projects.components.buttons)
+            implementation(projects.components.preview)
             implementation(libs.compose.runtime)
             implementation(libs.compose.foundation)
             implementation(libs.compose.material3)

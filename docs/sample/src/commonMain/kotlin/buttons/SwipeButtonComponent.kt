@@ -3,10 +3,10 @@ package buttons
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import ltd.cloudgrid.comments.buttons.swipe.DashedSwipeButton
-import ltd.cloudgrid.comments.buttons.swipe.FilledSwipeButton
-import ltd.cloudgrid.comments.buttons.swipe.OutlinedSwipeButton
 import ltd.cloudgrid.comments.buttons.swipe.rememberSwipeButtonState
+import ltd.cloudgrid.preview.buttons.DashedSwipeButton
+import ltd.cloudgrid.preview.buttons.FilledSwipeButton
+import ltd.cloudgrid.preview.buttons.OutlinedSwipeButton
 
 @Composable
 fun SwipeComponent() {

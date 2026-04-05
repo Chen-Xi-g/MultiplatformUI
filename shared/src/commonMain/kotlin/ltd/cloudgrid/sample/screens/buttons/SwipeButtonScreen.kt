@@ -7,15 +7,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ltd.cloudgrid.comments.buttons.swipe.DashedSwipeButton
-import ltd.cloudgrid.comments.buttons.swipe.FilledSwipeButton
-import ltd.cloudgrid.comments.buttons.swipe.OutlinedSwipeButton
 import ltd.cloudgrid.comments.buttons.swipe.rememberSwipeButtonState
+import ltd.cloudgrid.preview.buttons.DashedSwipeButton
+import ltd.cloudgrid.preview.buttons.FilledSwipeButton
+import ltd.cloudgrid.preview.buttons.OutlinedSwipeButton
 
 @Preview(showBackground = true)
 @Composable
