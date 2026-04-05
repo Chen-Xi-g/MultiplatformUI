@@ -2,31 +2,32 @@
 icon: lucide/book-open-text
 ---
 
-# Getting Started
+# 快速开始
 
-**Multiplatform UI** is a collection of high-quality UI components for Kotlin Multiplatform. This guide will help you integrate the library into your project.
+**Multiplatform UI** 是一套适用于 Kotlin Multiplatform 的高质量 UI 组件库。本指南将帮助你将库集成到项目中。
 
-## Supported Platforms
+## 支持平台
 
-- **Android**
-- **iOS**
-- **Desktop (JVM)**
-- **WasmJs**
-- **Js**
+![Android](https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-Native-000000?logo=apple&logoColor=white)
+![macOS](https://img.shields.io/badge/macOS-Native-000000?logo=apple&logoColor=white)
+![Desktop](https://img.shields.io/badge/Desktop-JVM-007396?logo=openjdk&logoColor=white)
+![JsCanvas](https://img.shields.io/badge/Web-JsCanvas-F7DF1E?logo=javascript)
+![WasmJs](https://img.shields.io/badge/Web-WasmJs-654FF0?logo=webassembly&logoColor=white)
 
-## Setup
+## 集成配置
 
-!!! tip
+!!! warning
 
-    [![Maven Central](https://img.shields.io/maven-central/v/com.github.Chen-Xi-g/MultiplatformUI)](https://search.maven.org/search?q=g:ltd.cloudgrid.components)
+    [![Maven Central](https://img.shields.io/github/v/release/Chen-Xi-g/MultiplatformUI)](https://search.maven.org/search?q=g:ltd.cloudgrid.components)
 
-    **Note**: Replace `<version>` with the latest release version found on Maven Central.
+    **注意**：请将 `<version>` 替换为 Maven Central 上的最新版本。
 
-To use Multiplatform UI in your project, follow these steps to configure your build system.
+在项目中使用 Multiplatform UI，请按照以下步骤配置构建系统。
 
-### 1. Add Repository
+### 1. 添加仓库
 
-Ensure `mavenCentral()` is included in your project's repository list. This is typically found in `settings.gradle.kts` or the root `build.gradle.kts`.
+确保项目仓库列表中包含 `mavenCentral()`，通常配置在 `settings.gradle.kts` 或根目录 `build.gradle.kts` 中。
 
 ```kotlin
 dependencyResolutionManagement {
@@ -36,38 +37,38 @@ dependencyResolutionManagement {
 }
 ```
 
-### 2. Add Dependencies
+### 2. 添加依赖
 
-You can include specific modules based on your needs. Add the dependencies to your module's `build.gradle.kts`.
+你可以根据需求按需引入对应模块。在模块的 `build.gradle.kts` 中添加依赖。
 
-**For Compose Multiplatform Projects (`commonMain`):**
+**Compose Multiplatform 项目（`commonMain`）：**
 
 ```kotlin
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation("ltd.cloudgrid.components:buttons:<version>")
+            implementation("ltd.cloudgrid.components:buttons:<version>") // Button 组件
         }
     }
 }
 ```
 
-**For Android-only Projects:**
+**仅 Android 项目：**
 
 ```kotlin
 dependencies {
-    implementation("ltd.cloudgrid.components:buttons-android:<version>")
+    implementation("ltd.cloudgrid.components:xxx-android:<version>") // Button 组件
 }
 ```
 
-## Available Modules
+## 可用模块
 
-The library is modularized so you only import what you use.
+本库采用模块化设计，按需引入即可。
 
-| Module | Description | Artifact ID |
+| 模块 | 说明 | 依赖坐标 |
 | :--- | :--- | :--- |
-| **Buttons** | Advanced button interactions (e.g., SwipeButton) | `ltd.cloudgrid.components:buttons` |
+| **Buttons** | 按钮交互组件 | `ltd.cloudgrid.components:buttons` |
 
-## API Documentation
+## API 文档
 
-View the [API Documentation](https://chen-xi-g.github.io/MultiplatformUI/dokka/), built with Dokka, that provides complete details for all available APIs.
+查看完整的 [API 文档](sslocal://flow/file_open?url=https%3A%2F%2Fchen-xi-g.github.io%2FMultiplatformUI%2Fdokka%2F&flow_extra=eyJsaW5rX3R5cGUiOiJjb2RlX2ludGVycHJldGVyIn0=)，由 Dokka 生成，包含所有可用 API 的详细说明。
