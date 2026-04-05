@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - "*-snapshot"
+      - "**/*-snapshot"
     paths:
       - "docs/**"
 
@@ -76,7 +76,7 @@ jobs:
             echo "Running Snapshot build -> /snapshot"
             zensical build --clean --base-path /snapshot
             mkdir -p ./site/snapshot
-            mv ./site/* ./site/snapshot/ 2>/dev/null || true
+            find ./site -mindepth 1 -maxdepth 1 ! -name snapshot -exec mv {} ./site/snapshot/ \;
           else
             echo "Running Production build"
             zensical build --clean

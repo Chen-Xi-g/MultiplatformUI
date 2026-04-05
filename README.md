@@ -17,7 +17,7 @@
 无需复杂配置，即可在 **Android**、**iOS**、**桌面端（JVM）** 和 **Web（Wasm/JS）**
 平台上轻松、快速地使用这些组件。
 
-[![Maven Central](https://img.shields.io/github/v/release/Chen-Xi-g/MultiplatformUI)](https://search.maven.org/search?q=g:ltd.cloudgrid.components)
+[![Release](https://img.shields.io/github/v/release/Chen-Xi-g/MultiplatformUI)](https://github.com/Chen-Xi-g/MultiplatformUI/releases)
 [![Kotlin](https://img.shields.io/badge/kotlin-2.3.10-7F52FF)](https://kotlinlang.org/)
 [![Compose Multiplatform](https://img.shields.io/badge/compose-1.10.0-4285F4)](https://www.jetbrains.com/compose-multiplatform)
 [![License](https://img.shields.io/github/license/Chen-Xi-g/MultiplatformUI)](LICENSE)

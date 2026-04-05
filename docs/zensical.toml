@@ -34,7 +34,7 @@ site_author = "高国峰"
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
-Copyright &copy; 2026 The 高国峰
+Copyright © 2026 Gao Guofeng
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -243,7 +243,7 @@ features = [
     # When anchor following for the table of contents is enabled, the sidebar
     # is automatically scrolled so that the active anchor is always visible.
     # https://zensical.org/docs/setup/navigation/#anchor-following
-     "toc.follow",
+    "toc.follow",
 
     # When navigation integration for the table of contents is enabled, it is
     # always rendered as part of the navigation sidebar on the left.
