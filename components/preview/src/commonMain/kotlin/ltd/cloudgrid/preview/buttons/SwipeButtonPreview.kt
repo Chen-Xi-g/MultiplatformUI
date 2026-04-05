@@ -1,4 +1,4 @@
-package ltd.cloudgrid.comments.buttons.swipe
+package ltd.cloudgrid.preview.buttons
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.foundation.background
@@ -35,9 +35,12 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
-import ltd.cloudgrid.components.buttons.generated.resources.Res
-import ltd.cloudgrid.components.buttons.generated.resources.ic_arrow_right_alt
-import ltd.cloudgrid.components.buttons.generated.resources.ic_check_circle
+import ltd.cloudgrid.comments.buttons.swipe.SwipeButton
+import ltd.cloudgrid.comments.buttons.swipe.SwipeButtonState
+import ltd.cloudgrid.comments.buttons.swipe.rememberSwipeButtonState
+import ltd.cloudgrid.components.preview.generated.resources.Res
+import ltd.cloudgrid.components.preview.generated.resources.ic_arrow_right_alt
+import ltd.cloudgrid.components.preview.generated.resources.ic_check_circle
 import org.jetbrains.compose.resources.painterResource
 
 

@@ -61,7 +61,7 @@ kotlin {
         implementation(libs.jetbrains.material3.adaptiveNavigation3)
         implementation(libs.jetbrains.lifecycle.viewmodelNavigation3)
         // Buttons
-        implementation(projects.components.buttons)
+        implementation(projects.components.preview)
     }
 }
 

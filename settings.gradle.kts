@@ -38,6 +38,7 @@ include(":app:desktopApp")
 include(":app:androidApp")
 include(":app:webApp")
 
+include(":components:preview")
 include(":components:buttons")
 
 include(":docs:sample")
