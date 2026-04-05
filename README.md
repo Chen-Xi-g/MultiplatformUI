@@ -1,5 +1,5 @@
 <div align="center">
- <img src="docs/handbook/images/logo.png" width="100px"/>
+ + <img src="docs/handbook/images/logo.png" width="100px" alt="Multiplatform UI logo"/>
 </div>
 
 <h1 align="center">Multiplatform UI</h1>
